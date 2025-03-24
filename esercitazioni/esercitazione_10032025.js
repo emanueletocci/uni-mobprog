@@ -16,10 +16,6 @@ let one = function() { return 1; }
 console.log(sum(one(), 4)); // 5
 
 
-
-
-
-
 let wrapper = function(valore, f) {
     return f(valore);
 }
