@@ -10,7 +10,11 @@
 .memory-card.flipped .emoji {
     @apply block;
 }
+.memory-card.matched {
+    @apply cursor-default opacity-50;
+}
 
 .emoji{
     @apply text-6xl hidden;
 }
+

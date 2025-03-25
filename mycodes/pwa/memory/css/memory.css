@@ -9,8 +9,11 @@
     --color-red-500: oklch(0.637 0.237 25.331);
     --color-orange-50: oklch(0.98 0.016 73.684);
     --color-amber-500: oklch(0.769 0.188 70.08);
+    --color-blue-500: oklch(0.623 0.214 259.815);
+    --color-blue-700: oklch(0.488 0.243 264.376);
     --color-violet-500: oklch(0.606 0.25 292.717);
     --color-violet-800: oklch(0.432 0.232 292.759);
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
@@ -347,6 +350,9 @@
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
   }
+  .mt-30 {
+    margin-top: calc(var(--spacing) * 30);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -448,6 +454,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -578,6 +587,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -1070,6 +1082,9 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
   .bg-orange-50 {
     background-color: var(--color-orange-50);
   }
@@ -1248,6 +1263,12 @@
   .object-top {
     object-position: top;
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
   .text-center {
     text-align: center;
   }
@@ -1381,6 +1402,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1820,6 +1844,13 @@
   .transform-view {
     transform-box: view-box;
   }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
+  }
   .hover\:font-extrabold {
     &:hover {
       @media (hover: hover) {
@@ -1853,6 +1884,10 @@
 }
 .memory-card.flipped .emoji {
   display: block;
+}
+.memory-card.matched {
+  cursor: default;
+  opacity: 50%;
 }
 .emoji {
   display: none;
