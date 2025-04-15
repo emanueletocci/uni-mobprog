@@ -1,5 +1,5 @@
 // questo è il file contenente il codice del Service Worker
-const CACHE_NAME = 'Memory';
+const CACHE_NAME = 'memory';
 
 // STEP 1: aggiunge un eventListener per l'evento install
 // l'evento install è il primo evento del Service Worker
@@ -17,8 +17,9 @@ self.addEventListener("install", event => {
             // alla risorsa e immagazzinarla nella cache
             cache.addAll([
                 '/',
-                '/convertitore.js',
-                '/converter.css'
+                '/js/memory.js',
+                '/css/input.css',
+                '/css/memory.css',
             ]);
         }
         )() // invoco la funzione data come parametro a waitUntil
