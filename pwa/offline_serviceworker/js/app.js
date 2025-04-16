@@ -13,8 +13,8 @@ if ("serviceWorker" in navigator) { // l'oggetto navigator non è altro che il b
       })
 }
 
-/*
+
 let bottone = document.getElementById("bottone");
 bottone.addEventListener("click", (evento) => {
     console.log("Qualcuno mi ha cliccato");
-})*/
+})

@@ -32,6 +32,7 @@ self.addEventListener("install", event => {
 // se non è nella cache, allora provo a richiederla al server
 // e la aggiungo alla cache
 self.addEventListener("fetch", event => {
+    console.log("Fetch request for:", event.request.url);
 	event.respondWith((async () => {
         // accede alla cache
 		const cache = await caches.open(CACHE_NAME);
@@ -53,7 +54,7 @@ self.addEventListener("fetch", event => {
 			} catch (e) {
                 // entro dentro questo catch quando il fetch a riga 47
                 // mi ha dato errore (esempio, non ho connessione internet)
-				console.log("errore :(");
+				console.log(e);
 			}
 		}
 	})());
