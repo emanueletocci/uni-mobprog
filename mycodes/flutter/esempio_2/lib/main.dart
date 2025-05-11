@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               icon: const Icon(Icons.adb_sharp),
               label: const Text("ElevatedButton + icon"),
               style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all(Colors.green),
+                foregroundColor: WidgetStateProperty.all(Colors.green),
               ),
             ),
             OutlinedButton(onPressed: (){}, child: const Text("OutlinedButton")), // pulsante con bordo
