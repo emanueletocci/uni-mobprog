@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
+// il package contiene i widget che implementano il Material Design
 
-// entry-point. Accetta come perametro un widget (generalmente quello principale)
+// entry-point. Accetta come perametro un widget (generalmente quello principale) che viene impostato come radice nel widget tree
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key});   
+  // il costruttore fa uso di una key che consente di identificare in modo univoco il widget
+  // Si sta usando una sintassi abbreviata (super initalizer), che corrisponde a:
+  // const MyApp({Key? key}) : super(key: key);
+
 
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
+    // build si occupa di definire l'oggetto widget e costruire il widget tree
+    // LIl metodo build puó contenere widget annidati, che possono essere definiti in modo ricorsivo
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.amber,
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Home Page - Demo'),  // si specifica la schermata di partenza
     );
@@ -35,6 +43,7 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
 
+  // Quando si crea un widget Stateful, bisogna fare l'override del metodo createState
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
